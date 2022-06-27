@@ -1,3 +1,3 @@
-module github.com/upyun/go-sdk/v3
+module github.com/beebird/upyun-go-sdk
 
 go 1.13
