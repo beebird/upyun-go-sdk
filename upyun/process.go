@@ -116,7 +116,7 @@ func (up *UpYun) doProcessRequest(method, uri string,
 	var resp *http.Response
 	var err error
 	endpoint := up.doGetEndpoint("p0.api.upyun.com")
-	rawurl := fmt.Sprintf("http://%s%s", endpoint, uri)
+	rawurl := fmt.Sprintf("https://%s%s", endpoint, uri)
 	switch method {
 	case "GET":
 		resp, err = up.doHTTPRequest(method, rawurl, headers, nil)
@@ -204,7 +204,7 @@ func (up *UpYun) doSyncProcessRequest(method, uri string, payload string) (map[s
 	var resp *http.Response
 	var err error
 	endpoint := up.doGetEndpoint("p1.api.upyun.com")
-	rawurl := fmt.Sprintf("http://%s%s", endpoint, uri)
+	rawurl := fmt.Sprintf("https://%s%s", endpoint, uri)
 	switch method {
 	case "POST":
 		resp, err = up.doHTTPRequest(method, rawurl, headers, strings.NewReader(payload))
