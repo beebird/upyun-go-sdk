@@ -10,7 +10,7 @@ import (
 
 // TODO
 func (up *UpYun) Purge(urls []string) (fails []string, err error) {
-	purge := "http://purge.upyun.com/purge/"
+	purge := "https://purge.upyun.com/purge/"
 	date := makeRFC1123Date(time.Now())
 	purgeList := unescapeUri(strings.Join(urls, "\n"))
 
